@@ -6,7 +6,6 @@ entradas.teclado = 2;
 entradas.gamepad = 3;
 var entrada = entradas.pulsaciones;
 
-console.log(entrada);
 
 
 

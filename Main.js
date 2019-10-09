@@ -4,27 +4,30 @@ var contexto = canvas.getContext("2d");
 var escaladoMinimo = 1;
 
 // Capas
+var layer;
 var gameLayer;
+var menuLayer;
 
 //Controles
 var controles = {};
 
 // Inicio capas y bucle del juego
 function iniciarJuego() {
-    gameLayer = new GameLayer();
+    menuLayer = new MenuLayer();
+    layer = menuLayer;
     setInterval(loop, 1000 / 30);
 }
 
 
 function loop(){
-    gameLayer.actualizar();
+    layer.actualizar();
 
     if (entrada == entradas.pulsaciones) {
-        gameLayer.calcularPulsaciones(pulsaciones);
+        layer.calcularPulsaciones(pulsaciones);
     }
 
-    gameLayer.procesarControles();
-    gameLayer.dibujar();
+    layer.procesarControles();
+    layer.dibujar();
 
     actualizarPulsaciones();
 }

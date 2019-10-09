@@ -55,7 +55,7 @@ function mouseup(event) {
 
 function agregarPulsacion(id, tipoPulsacion, event ){
     entrada= entradas.pulsaciones;
-    console.log("Pasando a pulsaciones");
+    
 
     x = event.pageX - canvas.offsetLeft;
     y = event.pageY - canvas.offsetTop;

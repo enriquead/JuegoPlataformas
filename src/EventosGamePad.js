@@ -37,7 +37,7 @@ function actualizarOrdenes(){
     // Float con 2 decimales
     controles.moverX = parseFloat(gP1.axes[0]).toFixed( 2 );
 
-    if ( gP1.buttons[0].pressed){ // 1 es el botón B
+    if ( gP1.buttons[0].pressed){ // 1 es el botón A
         if ( botonesPulsados[0] == false ) {
             botonesPulsados[0] = true;
             controles.moverY = 1;
@@ -47,13 +47,15 @@ function actualizarOrdenes(){
         controles.moverY = 0;
     }
 
-    if ( gP1.buttons[2].pressed){ // 2 es el botón A
+    if ( gP1.buttons[2].pressed){ // 2 es el botón X
         if ( botonesPulsados[2] == false ) {
             botonesPulsados[2] = true
             controles.disparo = true;
+            controles.continuar = true;
         }
     } else {
         botonesPulsados[2] = false
         controles.disparo = false;
+        controles.continuar = false;
     }
 }
