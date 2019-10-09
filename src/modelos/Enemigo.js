@@ -35,6 +35,22 @@ class Enemigo extends Modelo {
                 this.vxInteligencia = this.vxInteligencia * -1;
                 this.vx = this.vxInteligencia;
             }
+
+            if (this.fueraPorDerecha ){
+                // mover hacia la izquierda vx tiene que ser negativa
+                if ( this.vxInteligencia > 0){
+                    this.vxInteligencia = this.vxInteligencia * -1;
+                }
+                this.vx = this.vxInteligencia;
+            }
+            if (this.fueraPorIzquierda ){
+                // mover hacia la derecha vx tiene que ser positiva
+                if ( this.vxInteligencia < 0){
+                    this.vxInteligencia = this.vxInteligencia * -1;
+                }
+                this.vx = this.vxInteligencia;
+            }
+
         }
 
 
