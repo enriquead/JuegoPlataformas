@@ -23,7 +23,6 @@ function loop(){
         gameLayer.calcularPulsaciones(pulsaciones);
     }
 
-    gameLayer.calcularPulsaciones(pulsaciones);
     gameLayer.procesarControles();
     gameLayer.dibujar();
 

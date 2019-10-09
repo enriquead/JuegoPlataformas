@@ -151,10 +151,12 @@ class GameLayer extends Layer {
         //HUD
         this.fondoPuntos.dibujar();
         this.puntos.dibujar();
+        if ( entrada == entradas.pulsaciones) {
+            this.botonDisparo.dibujar();
+            this.botonSalto.dibujar();
+            this.pad.dibujar();
+        }
 
-        this.botonDisparo.dibujar();
-        this.botonSalto.dibujar();
-        this.pad.dibujar();
 
     }
 

@@ -6,6 +6,9 @@ entradas.teclado = 2;
 entradas.gamepad = 3;
 var entrada = entradas.pulsaciones;
 
+console.log(entrada);
+
+
 
 var tipoPulsacion= {};
 tipoPulsacion.inicio = 1;
