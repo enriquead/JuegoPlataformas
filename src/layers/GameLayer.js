@@ -2,6 +2,9 @@ class GameLayer extends Layer {
 
     constructor() {
         super();
+        this.mensaje = new Boton(imagenes.mensaje_como_jugar,480/2,320/2);
+        this.pausa = true;
+
         this.iniciar();
     }
 
@@ -33,12 +36,18 @@ class GameLayer extends Layer {
     }
 
     actualizar (){
+        if (this.pausa){
+            return;
+        }
+
 
         if ( this.copa.colisiona(this.jugador)){
             nivelActual++;
             if (nivelActual > nivelMaximo){
                 nivelActual = 0;
             }
+            this.pausa = true;
+            this.mensaje = new Boton(imagenes.mensaje_ganar,480/2,320/2)
             this.iniciar();
         }
 
@@ -157,10 +166,18 @@ class GameLayer extends Layer {
             this.pad.dibujar();
         }
 
+        if(this.pausa){
+            this.mensaje.dibujar();
+        }
+
 
     }
 
     procesarControles( ) {
+        if (controles.continuar){
+            controles.continuar = false;
+            this.pausa = false;
+        }
         // disparar
         if (controles.disparo) {
             var nuevoDisparo = this.jugador.disparar();
@@ -274,8 +291,15 @@ class GameLayer extends Layer {
         this.botonSalto.pulsado = false;
 
         controles.moverX = 0;
+        // Suponemos a false
+        controles.continuar = false;
 
         for(var i=0; i < pulsaciones.length; i++){
+            // MUY SIMPLE SIN BOTON cualquier click en pantalla lo activa
+            if(pulsaciones[i].tipo == tipoPulsacion.inicio){
+                controles.continuar = true;
+            }
+
 
             if (this.pad.contienePunto(pulsaciones[i].x , pulsaciones[i].y) ){
                 var orientacionX = this.pad.obtenerOrientacionX(pulsaciones[i].x);

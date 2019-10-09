@@ -5,6 +5,7 @@ window.addEventListener('keyup', onKeyUp, false);
 
 function onKeyDown( event) {
     // agregar la tecla pulsada si no estaba
+    entrada = entradas.teclado;
     var posicion = teclas.indexOf(event.keyCode); // indexof dice si el codigo ya está en el array
     if ( posicion == -1 ) {
         teclas.push(event.keyCode);
