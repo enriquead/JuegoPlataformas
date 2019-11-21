@@ -2,26 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45200255-2e16-4b59-aa70-4777cc5c702b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/res/animacion_tanque_muerte.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/banderaroja.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/banderaverde.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/iconoTanque.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/salto.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modelos/EnemigoBase.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modelos/EnemigoTanque.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modelos/Recolectable.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Res.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Res.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layers/GameLayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layers/GameLayer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelos/Boton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelos/Boton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelos/Enemigo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelos/Enemigo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelos/Jugador.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelos/Jugador.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelos/Modelo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelos/Modelo.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +75,7 @@
       <workItem from="1572806098234" duration="46000" />
       <workItem from="1574242388748" duration="10967000" />
       <workItem from="1574332312152" duration="6579000" />
-      <workItem from="1574348778043" duration="2796000" />
+      <workItem from="1574348778043" duration="7972000" />
     </task>
     <servers />
   </component>

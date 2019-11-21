@@ -102,16 +102,36 @@ class GameLayer extends Layer {
         for (var i=0; i < this.disparosJugador.length; i++) {
             this.disparosJugador[i].actualizar();
         }
+        this.colisiones();
 
+        // Enemigos muertos fuera del juego
+        for (let j=0; j < this.enemigos.length; j++){
+            if ( this.enemigos[j] != null &&
+                this.enemigos[j].estado == estados.muerto  ) {
+                this.espacio
+                    .eliminarCuerpoDinamico(this.enemigos[j]);
+                this.enemigos.splice(j, 1);
+                j = j-1;
+            }
+        }
+        for (let j=0; j < this.enemigosAplastables.length; j++){
+            if ( this.enemigosAplastables[j] != null &&
+                this.enemigosAplastables[j].estado == estados.muerto  ) {
+                this.espacio
+                    .eliminarCuerpoDinamico(this.enemigosAplastables[j]);
+                this.enemigosAplastables.splice(j, 1);
+                j = j-1;
+            }
+        }
 
-
-
+    }
+    colisiones(){
         // colisiones
         for (var i=0; i < this.enemigos.length; i++){
             if ( this.jugador.colisiona(this.enemigos[i]) ){
                 if(this.enemigos[i].estado != estados.muriendo
                     && this.enemigos[i].estado != estados.muerto)
-                this.jugador.golpeado();
+                    this.jugador.golpeado();
                 if (this.jugador.vidas <= 0){
                     this.iniciar();
                 }
@@ -129,9 +149,10 @@ class GameLayer extends Layer {
                         .eliminarCuerpoDinamico(this.disparosJugador[i]);
                     this.disparosJugador.splice(i, 1);
                     i = i-1;
-                    this.enemigos[j].impactado();
                     if(this.enemigos[j].estado==estados.moviendo)
                         this.puntos.valor++;
+                    this.enemigos[j].impactado();
+
                 }
             }
         }
@@ -175,7 +196,6 @@ class GameLayer extends Layer {
                     this.enemigosAplastables[i].impactado();
                     this.puntos.valor++;
                 }else{
-
                     if(this.enemigosAplastables[i].estado != estados.muriendo
                         && this.enemigosAplastables[i].estado != estados.muerto)
                         this.jugador.golpeado();
@@ -205,29 +225,6 @@ class GameLayer extends Layer {
             this.checkpoint.imagen.src = imagenes.bandera_verde;
             this.checkPassed = true;
         }
-
-
-        // Enemigos muertos fuera del juego
-        for (let j=0; j < this.enemigos.length; j++){
-            if ( this.enemigos[j] != null &&
-                this.enemigos[j].estado == estados.muerto  ) {
-                this.espacio
-                    .eliminarCuerpoDinamico(this.enemigos[j]);
-                this.enemigos.splice(j, 1);
-                j = j-1;
-            }
-        }
-        for (let j=0; j < this.enemigosAplastables.length; j++){
-            if ( this.enemigosAplastables[j] != null &&
-                this.enemigosAplastables[j].estado == estados.muerto  ) {
-                this.espacio
-                    .eliminarCuerpoDinamico(this.enemigosAplastables[j]);
-                this.enemigosAplastables.splice(j, 1);
-                j = j-1;
-            }
-        }
-
-
 
 
 
