@@ -163,9 +163,9 @@ class Jugador extends Modelo {
         this.estado = estados.moviendo;
     }
 
-    saltar(){
+    saltar(velocidad){
         if ( !this.enElAire ) {
-            this.vy = -16;
+            this.vy = velocidad;
             this.enElAire = true;
         }
     }

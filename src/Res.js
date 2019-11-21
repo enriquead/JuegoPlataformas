@@ -33,6 +33,16 @@ var imagenes = {
     mensaje_como_jugar : "res/mensaje_como_jugar.png",
     mensaje_ganar : "res/mensaje_ganar.png",
     mensaje_perder : "res/mensaje_perder.png",
+    animacion_recolectable: "res/recolectable.png",
+    tanque: "res/iconoTanque.png",
+    animacion_tanque_muerte : "res/animacion_tanque_muerte.png",
+    animacion_tanque_2_derecha: "res/animacion_tanque_2_derecha.png",
+    animacion_tanque_2_izquierda: "res/animacion_tanque_2_izquierda.png",
+    plataforma_salto: "res/salto.png",
+    bandera_roja: "res/banderaroja.png",
+    bandera_verde: "res/banderaverde.png",
+    metal : "res/bloque_metal.png"
+
 
 };
 

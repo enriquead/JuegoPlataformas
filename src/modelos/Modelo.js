@@ -28,6 +28,13 @@ class Modelo {
         }
         return colisiona;
     }
+    encimaDe (modelo){
+        var colisiona = false;
+        if (  this.y + this.alto/2 >= modelo.y - modelo.alto/2){
+            colisiona = true;
+        }
+        return colisiona;
+    }
 
     estaEnPantalla(){
         return ( (this.x - gameLayer.scrollX) -this.ancho/2 <= 480 &&
