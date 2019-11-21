@@ -191,7 +191,8 @@ class GameLayer extends Layer {
             for (var j = 0; j < this.enemigosAplastables.length; j++) {
                 if (this.disparosJugador[i] != null &&
                     this.enemigosAplastables[j] != null &&
-                    this.disparosJugador[i].colisiona(this.enemigosAplastables[j])) {
+                    this.disparosJugador[i].colisiona(this.enemigosAplastables[j]) &&
+                    this.enemigosAplastables[j].estado==estados.moviendo) {
                     this.espacio
                         .eliminarCuerpoDinamico(this.disparosJugador[i]);
                     this.disparosJugador.splice(i, 1);
